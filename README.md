@@ -58,9 +58,25 @@ kubectl -n ingress-nginx get all
 - Ingress-Nginx Ressource Template Link <br>
     - Reference: <b> <a href="https://docs.nginx.com/nginx-ingress-controller/configuration/ingress-resources/basic-configuration/"><u> Ingress-Nginx Ressource Template </a></u></b>
     
-###make sure about the ingress-nginx class name
+###make sure to populate the correct ingress-nginx class name
 ```bash
 kubectl -n ingress-nginx get ingressclass
 ```
+###to check the ingress resource 
 
+```bash
+kubectl -n app-space get ingress
+```
+- To see the more detail about ingress
+```bash
+kubectl -n app-space desribe ingress
+```
+- To see the  detail about ingress service
+```bash
+kubectl -n ingress-nginx get svc 
+```
+- If, you are using Kind Cluster you need to port forward
+ ```bash
+kubectl port-forward -n ingress-nginx service/ingress-nginx-controller 8080:80
+``` 
 ###Note: Customize the ingress resource manifest as per your requirements
