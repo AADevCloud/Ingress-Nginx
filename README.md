@@ -78,5 +78,12 @@ kubectl -n ingress-nginx get svc
 - If, you are using Kind Cluster you need to port forward
  ```bash
 kubectl port-forward -n ingress-nginx service/ingress-nginx-controller 8080:80
-``` 
+```
+- To check and confirm, Whatever individual Deployment and service is wokring fine using ClusterIP under kind cluster
+ ```bash
+kubectl get node
+###then enter the
+docker exec -it prod-worker sh
+```
+
 ###Note: Customize the ingress resource manifest as per your requirements
