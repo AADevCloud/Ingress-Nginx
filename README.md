@@ -84,6 +84,6 @@ kubectl port-forward -n ingress-nginx service/ingress-nginx-controller 8080:80
 kubectl get node
 ###then enter the
 docker exec -it prod-worker sh
+###Curl <Service IP>:Port
 ```
-
 ###Note: Customize the ingress resource manifest as per your requirements
